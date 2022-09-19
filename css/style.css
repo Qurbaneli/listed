@@ -1,0 +1,666 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap);
+
+
+*{
+
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+
+body
+{
+    background: #fff;
+    font-family: "Raleway",arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #6c757d;
+}
+
+header
+
+{
+
+    background-image: url("../img/bg.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    height:100vh;
+    padding:0px 210px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.header-overlay
+{
+    z-index: -1;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.493);
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+
+.logo
+
+{
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fff!important;
+}
+
+#top-menu
+
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul 
+
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav >ul >li:not(:last-child)
+{
+    margin-right: 20px;
+}
+
+nav >ul >li >a
+{
+    color: rgba(255,255,255,.5);
+    transition: 0.4s;
+}
+
+nav >ul >li >a:hover
+{
+    color: rgba(255,255,255);
+}
+
+nav >ul >li:first-child a
+{
+    color: rgba(255,255,255);
+}
+
+
+.top-dropdown-link:hover .top-dropdown
+{
+    opacity: 1;
+}
+
+.top-dropdown
+{
+    margin-top: 20px;
+    position: absolute;
+    opacity:0;
+    transition: 0.3s;
+    display:block;
+    background: #fff;
+    padding:10px 0px;
+    border-radius: 5px;
+}
+
+.top-dropdown:before
+{
+   content:" ";
+   display: block;
+
+        width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 12px solid rgb(255, 255, 255);
+    position:absolute;
+    top:-12px;
+    left:20px;
+
+}
+
+
+.top-dropdown >li
+{
+    width:180px;
+    padding:5px 0px;
+    padding-left:20px;
+    transition: 0.3s;
+}
+
+.top-dropdown li:hover
+{
+    background: #007bff;
+    
+}
+
+.top-dropdown li a
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
+    transition: 0.3s;
+}
+
+.top-dropdown li:hover a
+{
+    color: #fff;
+}
+
+
+
+@media screen and (max-width:1000px) {
+
+    header {
+        padding:0px 0px;
+
+    }
+
+    #top-menu {
+        padding:20px;
+        background: rgba(0, 0, 0, 0.322);
+
+    }
+
+    
+}
+
+@media screen and (max-width:786px) {
+
+    #top-menu {
+        padding:20px;
+        display: block;
+        background: rgba(0, 0, 0, 0.322);
+
+    }
+    #top-menu  nav ul{
+        display: block;
+
+    }
+    
+    
+}
+
+#search-zone
+
+{
+    margin-top: 210px;
+    text-align: center;
+}
+
+#search-zone h1
+
+{
+    color: #fff;
+    font-family: "Playfair Display",times,serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#search-zone p
+{
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+#search-zone .row
+
+{
+    justify-content: center;
+}
+
+#search-zone input
+{
+
+    width:570px;
+    height: 55px;
+    border-radius: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+#search-zone input:focus
+{
+
+    outline: none;
+}
+
+#search-zone button
+{
+    margin-left: -4px;
+    height: 55px;
+    width: 160px;
+    border-radius: 0px;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+
+#search-zone button:focus
+{
+  box-shadow: none;
+
+}
+
+@media screen and (max-width:1200px) {
+
+    #search-zone {
+       padding:20px;
+
+    }
+
+
+    #search-zone input {
+        margin-bottom: 30px;
+
+    }
+
+    
+}
+
+
+#places
+
+{
+    padding:0px 210px;
+    margin-top:-30px;
+   position:relative;
+   z-index: 4;
+   top:-20px;
+
+}
+
+.places-box
+{
+    position: relative;
+    transition: 0.3s;
+}
+
+
+#places .places-box:hover
+{
+    box-shadow: 2px 0 20px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+
+
+
+.places-box:hover .overlay-places
+{
+   background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.places-box:hover .overlay-places p 
+{
+    padding-bottom: 20px;
+    visibility:visible;
+    opacity: 1;
+}
+
+.places-box img
+{
+    height: 300px;
+    object-fit:cover;
+    display: block;
+}
+
+.overlay-places
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color:#fff;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.overlay-places i
+{
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.overlay-places h2
+
+{
+    transition: .3s all ease;
+    font-size: 18px;
+    font-family: "Playfair Display",times,serif;
+    font-weight: 400;
+    color: #fff;
+    top: 0px;
+    position: relative;
+}
+.overlay-places p 
+{
+opacity: 0;
+color: rgba(255, 255, 255, 0.5);
+top: 10px;
+visibility: hidden;
+font-size: 13px;
+transition: 0.3s;
+}
+
+
+@media screen and (max-width:1200px) {
+
+    #places {
+       padding:20px;
+
+    }
+
+    #places .row
+    {
+        justify-content:center;
+    }
+    .places-box
+    {
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+#destinations
+
+{
+    padding:0px 210px;
+    padding-top: 200px;
+    padding-bottom: 130px;
+}
+
+.destinations-heading
+{
+    text-align: center;
+}
+
+.destinations-heading h2
+{
+    color: #000;
+    font-family: "Playfair Display", times, serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.destinations-heading p
+{
+    width:580px;
+    margin:0 auto;
+    margin-bottom: 65px;
+}
+
+.destinations-box h3
+
+{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Playfair Display", times, serif;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.destinations-box p
+
+{
+    font-size: 13px;
+    color: #ccc;
+}
+
+@media screen and (max-width:1200px) {
+
+    #destinations {
+       padding:40px;
+
+    }
+
+    #destinations  .destinations-heading p{
+        width:100%;
+ 
+     }
+
+
+    
+}
+
+#travel
+
+{
+    height: 500px;
+    background-image: url(../img/travel.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px 75.1px;
+    
+}
+
+#travel .row
+
+{
+   flex-direction: column;
+   height: 500px;
+   align-items: center;
+   justify-content: center;
+}
+
+
+#travel h2
+
+{
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Playfair Display", times, serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#travel p
+
+{
+    color: #fff;
+    text-align: center;
+    width:625px;
+    margin-bottom: 1rem;
+}
+
+#travel a
+
+{
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+}
+
+
+@media screen and (max-width:1200px) {
+
+    #travel{
+       padding:40px;
+
+    }
+
+    #travel h2{
+        text-align: center;
+ 
+     }
+
+    #travel p{
+        width:100%;
+ 
+     }
+
+
+    
+}
+
+
+#featured
+
+{
+    padding:0px 210px;
+    padding-top:110px;
+    padding-bottom: 190px;
+
+}
+
+#featured .featured-text h2
+
+{
+    color: #000;
+    font-family: "Playfair Display",times,serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#featured .featured-text p
+
+{
+    margin-bottom: 3rem;
+}
+
+
+#featured .places-box
+
+{
+    width:240px;
+}
+
+#featured button
+
+{
+    padding: 12px 30px;
+    border:none;
+    margin-right:8px;
+}
+
+#featured button i
+
+{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width:1200px) {
+
+    #featured{
+       padding:40px;
+
+    }
+
+    .featured-text{
+        margin-bottom: 30px;
+     }
+    #featured .places-box
+
+    {
+        width:100%;
+    }
+
+    
+}
+
+footer
+
+{
+    padding:85px 210px;
+    background: #f2f2f2;
+}
+
+footer h3
+
+{
+    font-size: 20px;
+    margin-bottom: 1.5rem!important;
+    color: #000;
+    font-family: "Playfair Display",times,serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.footer-box p
+
+{
+    color: #000;
+}
+
+.footer-about
+
+{
+    width:350px;
+
+}
+
+.footer-about-box p
+{
+    width:300px;
+}
+
+
+.footer-box ul li
+
+{
+   margin-bottom: 10px;
+}
+
+.footer-box ul li a
+
+{
+    color: #000;
+}
+
+@media screen and (max-width:1200px) {
+
+   footer{
+       padding:40px;
+
+    }
+
+    .footer-box
+    {
+        margin-bottom: 30px;
+    }
+
+    
+}
